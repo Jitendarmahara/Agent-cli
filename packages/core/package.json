@@ -1,0 +1,42 @@
+{
+  "name": "@terminus/core",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": {
+      "bun": "./src/index.ts",
+      "default": "./dist/index.js"
+    },
+    "./types": {
+      "bun": "./src/types.ts",
+      "default": "./dist/types.js"
+    },
+    "./loop": {
+      "bun": "./src/loop.ts",
+      "default": "./dist/loop.js"
+    },
+    "./providers": {
+      "bun": "./src/providers/index.ts",
+      "default": "./dist/providers/index.js"
+    },
+    "./tools": {
+      "bun": "./src/tools/index.ts",
+      "default": "./dist/tools/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -b --watch"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.100.0",
+    "@google/genai": "^2.8.0",
+    "@terminus/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
+  }
+}
